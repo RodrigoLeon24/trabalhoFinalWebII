@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset = 'UTF-8'>
+			<title> Street Fighter </title>
+			<link rel='icon' href='favicon.png'>
+			<link rel='stylesheet' href='sfcstyle.css'>
+		</head>
+		
+		<body>		
+			<div id='containermain'>
+                <div id='sky'></div>
+                <div id='citysillouette'></div>
+                <div id='floor2'></div>
+                <div id='cornerfloor1'></div>
+                <div id='wallc'></div>
+                <div id='floorc'></div>
+                <div id='ryu'>
+                    <img id='splash' src='Characters - ryusplash.png' />
+                    <div class='breakwall stageryu'>
+                    <video id='ryuversion' width="1080" height="864">
+                        <source src="Characters - ryubrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall ryusmash'>
+                        <video id='ryuversion2' width="1080" height="864">
+                           <source src="Characters - ryubricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='ryuversion3' width="1080" height="864">
+                            <source src="Characters - ryubrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingryu'>
+                        <video id='ryuversion4' width="1080" height="864" loop>
+                            <source src="Characters - ryustanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall agreeingryu'>
+                        <video id='ryuversion5' width="1080" height="864">
+                            <source src="Characters - ryuagreeing.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall hadouken'>
+                        <video id='ryuversion6' width="1080" height="864">
+                            <source src="Characters - ryuhadouken.webm">
+                        </video>
+                    </div>
+                    <div id='click1' onclick="playBreakWall(ryuversion)"></div>
+                    <div id='click2' onclick="randomIdle()"></div>
+                </div>
+                <div id='ken'>
+                    <img id='splash2' src='Characters - kensplash.png' />
+                    <div class='breakwall stageken'>
+                    <video id='kenversion' width="1080" height="864">
+                        <source src="Characters - kenbrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall kensmash'>
+                        <video id='kenversion2' width="1080" height="864">
+                           <source src="Characters - kenbricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='kenversion3' width="1080" height="864">
+                            <source src="Characters - kenbrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingken'>
+                        <video id='kenversion4' width="1080" height="864" loop>
+                            <source src="Characters - kenstanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idleken'>
+                        <video id='kenversion5' width="1080" height="864">
+                            <source src="Characters - idleken.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall shoryuken'>
+                        <video id='kenversion6' width="1080" height="864">
+                            <source src="Characters - kenshoryuken.webm">
+                        </video>
+                    </div>
+                    <div id='click3' onclick="playBreakWall2(kenversion)"></div>
+                    <div id='click4' onclick="randomIdle2()"></div>
+                </div>
+                <div id='chunli'>
+                    <img id='splash3' src='Characters - chunlisplash.png' />
+                    <div class='breakwall stagechunli'>
+                    <video id='chunliversion' width="1080" height="864">
+                        <source src="Characters - chunlibrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall chunlismash repositionChun'>
+                        <video id='chunliversion2' width="1080" height="864">
+                           <source src="Characters - chunlibricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow2'>
+                        <video id='chunliversion3' width="1080" height="864">
+                            <source src="Characters - chunlibrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingchunli repositionChun'>
+                        <video id='chunliversion4' width="1080" height="864" loop>
+                            <source src="Characters - chunlistanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idlechunli repositionChun'>
+                        <video id='chunliversion5' width="1080" height="864">
+                            <source src="Characters - idlechunli.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall specialchunli repositionChun'>
+                        <video id='chunliversion6' width="1080" height="864">
+                            <source src="Characters - chunlihyakuretsukyaku.webm">
+                        </video>
+                    </div>
+                    <div id='click5' onclick="playBreakWall3(chunliversion)"></div>
+                    <div id='click6' onclick="randomIdle3()"></div>
+                </div>
+                <div id='guile'>
+                    <img id='splash4' src='Characters - guilesplash.png' />
+                    <div class='breakwall stageguile'>
+                    <video id='guileversion' width="1080" height="864">
+                        <source src="Characters - guilebrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall guilesmash'>
+                        <video id='guileversion2' width="1080" height="864">
+                           <source src="Characters - guilebricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='guileversion3' width="1080" height="864">
+                            <source src="Characters - guilebrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingguile'>
+                        <video id='guileversion4' width="1080" height="864" loop>
+                            <source src="Characters - guilestanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idleguile'>
+                        <video id='guileversion5' width="1080" height="864">
+                            <source src="Characters - idleguile.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall sonicboom'>
+                        <video id='guileversion6' width="1080" height="864">
+                            <source src="Characters - guilesonicboom.webm">
+                        </video>
+                    </div>
+                    <div id='click7' onclick="playBreakWall4(guileversion)"></div>
+                    <div id='click8' onclick="randomIdle4()"></div>
+                </div>
+                <div id='cammy'>
+                    <img id='splash' src='Characters - cammysplash.png' />
+                    <div class='breakwall stagecammy'>
+                    <video id='cammyversion' width="1080" height="864">
+                        <source src="Characters - cammybrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall cammysmash'>
+                        <video id='cammyversion2' width="1080" height="864">
+                           <source src="Characters - cammybricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='cammyversion3' width="1080" height="864">
+                            <source src="Characters - cammybrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingcammy'>
+                        <video id='cammyversion4' width="1080" height="864" loop>
+                            <source src="Characters - cammystanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idlecammy'>
+                        <video id='cammyversion5' width="1080" height="864">
+                            <source src="Characters - idlecammy.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall cannonspike'>
+                        <video id='cammyversion6' width="1080" height="864">
+                            <source src="Characters - cammycannonspike.webm">
+                        </video>
+                    </div>
+                    <div id='click9' onclick="playBreakWall5(cammyversion)"></div>
+                    <div id='click10' onclick="randomIdle5()"></div>
+                </div>
+                <div id='akuma'>
+                    <img id='splash6' src='Characters - akumasplash.png' />
+                    <div class='breakwall stageakuma'>
+                    <video id='akumaversion' width="1080" height="864">
+                        <source src="Characters - akumabrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall akumasmash'>
+                        <video id='akumaversion2' width="1080" height="864">
+                           <source src="Characters - akumabricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='akumaversion3' width="1080" height="864">
+                            <source src="Characters - akumabrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingakuma'>
+                        <video id='akumaversion4' width="1080" height="864" loop>
+                            <source src="Characters - akumastanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idleakuma'>
+                        <video id='akumaversion5' width="1080" height="864">
+                            <source src="Characters - idleakuma.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall shungokusatsu'>
+                        <video id='akumaversion6' width="1080" height="864">
+                            <source src="Characters - akumashungokusatsu.webm">
+                        </video>
+                    </div>
+                    <div id='click11' onclick="playBreakWall6(akumaversion)"></div>
+                    <div id='click12' onclick="randomIdle6()"></div>
+                </div>
+                <div id='sagat'>
+                    <img id='splash7' src='Characters - sagatsplash.png' />
+                    <div class='breakwall stagesagat'>
+                    <video id='sagatversion' width="1080" height="864">
+                        <source src="Characters - sagatbrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall sagatsmash'>
+                        <video id='sagatversion2' width="1080" height="864">
+                           <source src="Characters - sagatbricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='sagatversion3' width="1080" height="864">
+                            <source src="Characters - sagatbrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingsagat'>
+                        <video id='sagatversion4' width="1080" height="864" loop>
+                            <source src="Characters - sagatstanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idlesagat'>
+                        <video id='sagatversion5' width="1080" height="864">
+                            <source src="Characters - idlesagat.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall tigeruppercut'>
+                        <video id='sagatversion6' width="1080" height="864">
+                            <source src="Characters - sagattigeruppercut.webm">
+                        </video>
+                    </div>
+                    <div id='click13' onclick="playBreakWall7(sagatversion)"></div>
+                    <div id='click14' onclick="randomIdle7()"></div>
+                </div>
+                <div id='bison'>
+                    <img id='splash8' src='Characters - bisonplash.png' />
+                    <div class='breakwall stagebison'>
+                    <video id='bisonversion' width="1080" height="864">
+                        <source src="Characters - bisonbrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall bisonsmash'>
+                        <video id='bisonversion2' width="1080" height="864">
+                           <source src="Characters - bisonbricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='bisonversion3' width="1080" height="864">
+                            <source src="Characters - bisonbrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingbison'>
+                        <video id='bisonversion4' width="1080" height="864" loop>
+                            <source src="Characters - bisonstanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idlebison'>
+                        <video id='bisonversion5' width="1080" height="864">
+                            <source src="Characters - idlebison.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall psychocrusher'>
+                        <video id='bisonversion6' width="1080" height="864">
+                            <source src="Characters - bisonpsychocrusher.webm">
+                        </video>
+                    </div>
+                    <div id='click15' onclick="playBreakWall8(bisonversion)"></div>
+                    <div id='click16' onclick="randomIdle8()"></div>
+                </div>
+                <div id='balrog'>
+                    <img id='splash9' src='Characters - balrogsplash.png' />
+                    <div class='breakwall stagebalrog'>
+                    <video id='balrogversion' width="1080" height="864">
+                        <source src="Characters - balrogbrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall balrogsmash'>
+                        <video id='balrogversion2' width="1080" height="864">
+                           <source src="Characters - balrogbricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow2'>
+                        <video id='balrogversion3' width="1080" height="864">
+                            <source src="Characters - balrogbrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingbalrog'>
+                        <video id='balrogversion4' width="1080" height="864" loop>
+                            <source src="Characters - balrogstanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idlebalrog'>
+                        <video id='balrogversion5' width="1080" height="864">
+                            <source src="Characters - idlebalrog.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall turnpunch'>
+                        <video id='balrogversion6' width="1080" height="864">
+                            <source src="Characters - balrogturnpunch.webm">
+                        </video>
+                    </div>
+                    <div id='click17' onclick="playBreakWall9(balrogversion)"></div>
+                    <div id='click18' onclick="randomIdle9()"></div>
+                </div>
+                <div id='zangief'>
+                    <img id='splash10' src='Characters - zangiefsplash.png' />
+                    <div class='breakwall stagezangief repositionZangief'>
+                    <video id='zangiefversion' width="1080" height="864">
+                        <source src="Characters - zangiefbrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall zangiefsmash'>
+                        <video id='zangiefversion2' width="1080" height="864">
+                           <source src="Characters - zangiefbricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow2'>
+                        <video id='zangiefversion3' width="1080" height="864">
+                            <source src="Characters - zangiefbrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingzangief'>
+                        <video id='zangiefversion4' width="1080" height="864" loop>
+                            <source src="Characters - zangiefstanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idlezangief'>
+                        <video id='zangiefversion5' width="1080" height="864">
+                            <source src="Characters - idlezangief.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall spinningpiledriver'>
+                        <video id='zangiefversion6' width="1080" height="864">
+                            <source src="Characters - zangiefspinningpiledriver.webm">
+                        </video>
+                    </div>
+                    <div id='click19' onclick="playBreakWall10(zangiefversion)"></div>
+                    <div id='click20' onclick="randomIdle10()"></div>
+                </div>
+                <div id='dhalsim'>
+                    <img id='splash11' src='Characters - dhalsimsplash.png' />
+                    <div class='breakwall dhalsimsmash'>
+                        <video id='dhalsimversion2' width="1080" height="864">
+                           <source src="Characters - dhalsimentrance.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingdhalsim'>
+                        <video id='dhalsimversion4' width="1080" height="864" loop>
+                            <source src="Characters - dhalsimstanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idledhalsim'>
+                        <video id='dhalsimversion5' width="1080" height="864">
+                            <source src="Characters - idledhalsim.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall yogaflame'>
+                        <video id='dhalsimversion6' width="1080" height="864">
+                            <source src="Characters - dhalsimyogaflame.webm">
+                        </video>
+                    </div>
+                    <div id='click21' onclick="playBreakWall11(dhalsimversion2)"></div>
+                    <div id='click22' onclick="randomIdle11()"></div>
+                </div>
+                <div id='ehonda'>
+                    <img id='splash12' src='Characters - ehondasplash.png' />
+                    <div class='breakwall stageehonda'>
+                    <video id='ehondaversion' width="1080" height="864">
+                        <source src="Characters - ehondabrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall ehondasmash'>
+                        <video id='ehondaversion2' width="1080" height="864">
+                           <source src="Characters - ehondabricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='ehondaversion3' width="1080" height="864">
+                            <source src="Characters - ehondabrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingehonda'>
+                        <video id='ehondaversion4' width="1080" height="864" loop>
+                            <source src="Characters - ehondastanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idleehonda'>
+                        <video id='ehondaversion5' width="1080" height="864">
+                            <source src="Characters - idleehonda.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall hundredhandslap'>
+                        <video id='ehondaversion6' width="1080" height="864">
+                            <source src="Characters - ehondahundredhandslap.webm">
+                        </video>
+                    </div>
+                    <div id='click23' onclick="playBreakWall12(ehondaversion)"></div>
+                    <div id='click24' onclick="randomIdle12()"></div>
+                </div>
+                <div id='vega'>
+                    <img id='splash13' src='Characters - vegasplash.png' />
+                    <div class='breakwall stagevega'>
+                    <video id='vegaversion' width="1080" height="864">
+                        <source src="Characters - vegabrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall vegasmash'>
+                        <video id='vegaversion2' width="1080" height="864">
+                           <source src="Characters - vegabricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='vegaversion3' width="1080" height="864">
+                            <source src="Characters - vegabrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingvega'>
+                        <video id='vegaversion4' width="1080" height="864" loop>
+                            <source src="Characters - vegastanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idlevega'>
+                        <video id='vegaversion5' width="1080" height="864">
+                            <source src="Characters - idlevega.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall flyingbarcelona'>
+                        <video id='vegaversion6' width="1080" height="864">
+                            <source src="Characters - vegaflyingbarcelonaattack.webm">
+                        </video>
+                    </div>
+                    <div id='click25' onclick="playBreakWall13(vegaversion)"></div>
+                    <div id='click26' onclick="randomIdle13()"></div>
+                </div>
+                <div id='blanka'>
+                    <img id='splash13' src='Characters - blankasplash.png' />
+                    <div class='breakwall stageblanka'>
+                    <video id='blankaversion' width="1080" height="864">
+                        <source src="Characters - blankabrickstage.webm">
+                    </video>
+                    </div>
+                    <div class='breakwall blankasmash'>
+                        <video id='blankaversion2' width="1080" height="864">
+                           <source src="Characters - blankabricksmash.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall bricksthrow'>
+                        <video id='blankaversion3' width="1080" height="864">
+                            <source src="Characters - blankabrick.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall standingblanka'>
+                        <video id='blankaversion4' width="1080" height="864" loop>
+                            <source src="Characters - blankastanding.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall idleblanka'>
+                        <video id='blankaversion5' width="1080" height="864">
+                            <source src="Characters - idleblanka.webm">
+                        </video>
+                    </div>
+                    <div class='breakwall electricthunder'>
+                        <video id='blankaversion6' width="1080" height="864">
+                            <source src="Characters - blankaeletricthunder.webm">
+                        </video>
+                    </div>
+                    <div id='click27' onclick="playBreakWall14(blankaversion)"></div>
+                    <div id='click28' onclick="randomIdle14()"></div>
+                </div>
+                <div id='info'>
+                    <div class='title'>
+                        <h1 id="ryuTitle">Ryu</h1>
+                        <h1 id="kenTitle">Ken</h1>
+                        <h1 id="chunTitle">Chun Li</h1>
+                        <h1 id="guileTitle">Guile</h1>
+                        <h1 id="cammyTitle">Cammy</h1>
+                        <h1 id="akumaTitle">Akuma</h1>
+                        <h1 id="sagatTitle">Sagat</h1>
+                        <h1 id="bisonTitle">M. Bison</h1>
+                        <h1 id="balrogTitle">Balrog</h1>
+                        <h1 id="zangiefTitle">Zangief</h1>
+                        <h1 id="dhalsimTitle">Dhalsim</h1>
+                        <h1 id="eHondaTitle">E. Honda</h1>
+                        <h1 id="vegaTitle">Vega</h1>
+                        <h1 id="blankaTitle">Blanka</h1>
+                    </div>
+                    <div id='inkblot'></div>
+                    <div class='text trainLoc'><a>Training<br>Spot</a><br>
+                        <div id='japan'><img src='Japan.png' width="40px" height="25px"/></div>
+                        <div id='japan2'><img src='Japan.png' width="40px" height="25px"/></div>
+                        <div id='china'><img src='China.png' width="40px" height="25px"/></div>
+                        <div id='usa'><img src='USA.png' width="40px" height="25px"/></div>
+                        <div id='uk'><img src='UK.png' width="40px" height="25px"/></div>
+                        <div id='japan3'><img src='Japan.png' width="40px" height="25px"/></div>
+                        <div id='thai'><img src='Thai.png' width="40px" height="25px"/></div>
+                        <div id='shadaloo'><img src='Shadaloo.png' width="40px" height="25px"/></div>
+                        <div id='usa2'><img src='USA.png' width="40px" height="25px"/></div>
+                        <div id='russia'><img src='Russia.png' width="40px" height="25px"/></div>
+                        <div id='india'><img src='India.png' width="40px" height="25px"/></div>
+                        <div id='japan4'><img src='Japan.png' width="40px" height="25px"/></div>
+                        <div id='spain'><img src='Espana.png' width="40px" height="25px"/></div>
+                        <div id='brazil'><img src='Brazil.png' width="40px" height="25px"/></div>
+                    </div>
+                    <div class='text birth'><a>Birthday<br></a>
+                        <div id='ryuDay'>28/02</div>
+                        <div id='kenDay'>14/02</div>
+                        <div id='chunDay'>01/03</div>
+                        <div id='guileDay'>23/12</div>
+                        <div id='cammyDay'>06/01</div>
+                        <div id='akumaDay'>??/??</div>
+                        <div id='sagatDay'>02/07</div>
+                        <div id='bisonDay'>17/04</div>
+                        <div id='balrogDay'>04/04</div>
+                        <div id='zangiefDay'>01/06</div>
+                        <div id='dhalsimDay'>22/11</div>
+                        <div id='ehondaDay'>03/11</div>
+                        <div id='vegaDay'>27/01</div>
+                        <div id='blankaDay'>12/02</div>
+                    </div>
+                    <div class='text fightStyle'><a>Fight<br>Style<br></a>
+                        <div id='karate'>Karatê</div>
+                        <div id='machinese'>Chinese Marcial Arts</div>
+                        <div id='wrestling'>Wrestling</div>
+                        <div id='shadaloodelta'>Shadaloo Fight Tecnics + Delta Red</div>
+                        <div id='ansatsuken'>Ansatsuken</div>
+                        <div id='muaythai'>Mhuay Thai</div>
+                        <div id='psychopower'>Psycho Power</div>
+                        <div id='boxing'>Boxing</div>
+                        <div id='yoga'>Esoteric Yoga</div>
+                        <div id='sumo'>Sumô</div>
+                        <div id='spanishninjutsu'>Spanish Ninjutsu</div>
+                        <div id='electricattacks'>Electric Attacks</div>
+                    </div>
+                    <div class='text special'><a>Special<br>Moveset<br></a>
+                        <div id='hadouken'><div id='hadClick' onclick="specialIdle()"></div>Hadouken</div>
+                        <div id='shoryuken'><div id='hadClick2' onclick="specialIdle2()"></div>Shoryuken</div>
+                        <div id='hyakuretsukyaku'><div id='hadClick3' onclick="specialIdle3()"></div>Hyakuretsukyaku</div>
+                        <div id='sonicboom'><div id='hadClick4' onclick="specialIdle4()"></div>Sonic Boom</div>
+                        <div id='cannonspike'><div id='hadClick5' onclick="specialIdle5()"></div>Cannon Spike</div>
+                        <div id='shungokusatsu'><div id='hadClick6' onclick="specialIdle6()"></div>Shun Goku Satsu</div>
+                        <div id='tigeruppercut'><div id='hadClick7' onclick="specialIdle7()"></div>Tiger Uppercut</div>
+                        <div id='psychocrusher'><div id='hadClick8' onclick="specialIdle8()"></div>Psycho Crusher</div>
+                        <div id='turnpunch'><div id='hadClick9' onclick="specialIdle9()"></div>Turn Punch</div>
+                        <div id='spinningpiledriver'><div id='hadClick10' onclick="specialIdle10()"></div>Spinning Pile Driver</div>
+                        <div id='yogaflame'><div id='hadClick11' onclick="specialIdle11()"></div>Yoga Flame</div>
+                        <div id='hundredhandslap'><div id='hadClick12' onclick="specialIdle12()"></div>Hundred Hand Slap</div>
+                        <div id='flyingbarcelona'><div id='hadClick13' onclick="specialIdle13()"></div> Flying Barcelona Attack</div>
+                        <div id='electricthunder'><div id='hadClick14' onclick="specialIdle14()"></div>Electric Thunder</div>
+                    </div>
+                    <div class='text release'><a>Release<br></a>
+                        <div id='sf1'><img src='streetfighter1 - logo.png' width="70px" height="30px"/></div>
+                        <div id='sf2'><img src='streetfighter2 - logo.png' width="70px" height="30px"/></div>
+                    </div>
+                </div>
+                <div id='characterSelect'>
+                    <div class='character ryuSel'><img id='ryuButton' onclick="ryuCall()" src='Thumb_ryu_sf3.png' width="72px" height="72px"/></div>
+                    <div class='character kenSel'><img id='kenButton' onclick="kenCall()" src='Thumb_ken_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character chunSel'><img id='chunButton' onclick="chunCall()" src='Thumb_chunli_sf3.png' width="72px" height="72px"/></div>
+                    <div class='character guileSel'><img id='guileButton' onclick="guileCall()" src='Thumb_guile_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character cammySel'><img id='cammyButton' onclick="cammyCall()" src='Thumb_cammy_sfa.png' width="72px" height="72px"/></div>
+                    <div class='character akumaSel'><img id='akumaButton' onclick="akumaCall()" src='Thumb_akuma_sf3.png' width="72px" height="72px"/></div>
+                    <div class='character sagatSel'><img id='sagatButton' onclick="sagatCall()" src='Thumb_sagat_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character bisonSel'><img id='bisonButton' onclick="bisonCall()" src='Thumb_mbison_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character balrogSel'><img id='balrogButton' onclick="balrogCall()" src='Thumb_balrog_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character zangiefSel'><img id='zangiefButton' onclick="zangiefCall()" src='Thumb_zangief_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character dhalsimSel'><img id='dhalsimButton' onclick="dhalsimCall()" src='Thumb_dhalsim_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character eHondaSel'><img id='eHondaButton' onclick="eHondaCall()" src='Thumb_ehonda_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character vegaSel'><img id='vegaButton' onclick="vegaCall()" src='Thumb_vega_ssf2.png' width="72px" height="72px"/></div>
+                    <div class='character blankaSel'><img id='blankaButton' onclick="blankaCall()" src='Thumb_blanka_ssf2.png' width="72px" height="72px"/></div>
+                </div>
+			</div>
+            
+            <div id='container1'>
+                <div id='header'>
+                    <div id='bricks'></div>
+                    <div id='logo'></div>
+                </div>
+            </div>		
+			<script src='streetfightersite2.js'></script>
+		</body>
+	</html>

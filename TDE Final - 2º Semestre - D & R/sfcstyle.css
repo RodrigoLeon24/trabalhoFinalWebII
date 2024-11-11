@@ -1,0 +1,1725 @@
+body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    /*overflow-x: hidden;*/
+}
+
+/*#blackdiv{
+    width: 1920px;
+    height: 1080px;
+    background-color: black;
+    animation: opdiv 3s ;
+}
+
+@keyframes opdiv{
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}*/
+
+#container1{
+	position: absolute;
+	display: flex;
+	width: 300px;
+	height: 300px;
+    transform: translateY(-830px);
+}
+
+#header{
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	display: block;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#logo{
+	width: 100%;
+	height: 35%;
+	background-image: url('SF - Header Logo Centralized.png');
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: 10px -90px;
+	opacity: 70%;
+	filter: grayscale(60%);
+	position: relative;
+	float: center;
+	margin-top: -300px;
+	transition: ease 1s;
+	cursor: pointer;
+}
+
+#logo:hover{
+	transform: scale(110%);
+}
+
+#bricks{
+	width: 100%;
+	height: 100%;
+	background-image: url('SF - Header Brick.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position-y: -30px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#containermain{
+	display: flex;
+	width: 1536px;
+	height: 825px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	perspective: 100px;
+	transform-style: preserve-3d;
+}
+
+#sky{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	background-image: url('Homepage - Day.png');
+	background-size: 80%;
+    left: 200px;
+	background-repeat: no-repeat;
+	transform: translateZ(0px) scale(130%) translateY(-270px);
+}
+
+#citysillouette{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	background-image: url('Backcity - Homepage - Day.png');
+	background-size: 80%;
+    left: 200px;
+	background-repeat: no-repeat;
+	transform: translateZ(0px) scale(130%) translateY(-270px);
+}
+
+#cornerfloor1{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 200px;
+	background: rgb(130, 130, 130);
+    left: 200px;
+	background-repeat: no-repeat;
+	transform: translateZ(0px) scale(130%) translateY(440px);
+}
+
+#floor2{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	background-image: url('city - floorbeacon.png');
+	background-size: 80%;
+    left: 200px;
+	background-repeat: no-repeat;
+    filter: grayscale(40%);
+	transform: translateZ(-1px) scale(190%) scaleY(30%) translateY(1048px);
+}
+
+
+#wallc{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	background-image: url('Characters - brick.png');
+	background-size: 80%;
+    left: 200px;
+	background-repeat: no-repeat;
+	transform: translateZ(4px) scale(130%) translateY(-90px);
+}
+
+#floorc{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	background-image: url('Characters - floor.png');
+	background-size: 80%;
+    left: 260px;
+	background-repeat: no-repeat;
+	transform: translateZ(4px) scale(130%) scaleY(20%) translateY(1520px);
+}
+
+#ryu, #ken, #chunli, #guile, #cammy, #akuma, #sagat, #bison, #balrog, #zangief, #dhalsim, #ehonda, #vega, #blanka{
+    overflow: hidden;
+    visibility: hidden;
+    position: absolute;
+    perspective: 100px;
+	transform-style: preserve-3d;
+	width: 1536px;
+	height: 825px;
+    left: 0px;
+	transform: translateZ(4px) scale(119%) scaleY(130%) translateY(-10px);
+}
+
+#splash{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	transform: translateZ(5px);
+}
+
+#splash2{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	transform: translateZ(5px) scale(92%) translateY(-7px) translateX(8px);
+}
+
+#splash3, #splash4, #splash5, #splash6, #splash7, #splash8, #splash9, #splash10, #splash11, #splash12, #splash13, #splash14, #splash15{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+	transform: translateZ(5px) scale(92%);
+}
+
+.breakwall{
+    overflow: hidden;
+    position: absolute;
+	width: 1536px;
+	height: 825px;
+    left: 190px;
+	transform: translateZ(6px) scale(80%);
+}
+
+.stagechunli, .stagezangief{
+    transform: translateY(-23.5px);
+}
+.repositionChun{
+    transform: translateY(3px) translateX(20px) scale(93%);
+}
+
+.repositionZangief{
+    transform: translateY(70px) translateX(20px) scale(93%);
+}
+
+.bricksthrow2{
+    transform: translateY(58px);
+}
+
+.stagebalrog{
+    transform: translateY(-20px);
+}
+
+.standingryu, .standingken, .standingchunli, .standingguile, .standingcammy, .standingakuma, .standingsagat, .standingbison, .standingbalrog,
+.standingzangief, .standingdhalsim, .standingehonda, .standingvega, .standingblanka{
+    visibility: hidden;
+}
+
+.agreeingryu, .idleken, .idlechunli, .idleguile, .idlecammy, .idleakuma, .idlesagat, .idlebison, .idlebalrog, .idlezangief, .idledhalsim,
+.idleehonda, .idlevega, .idleblanka{
+    visibility: hidden;
+}
+
+.hadouken, .shoryuken, .hyakuretsukyaku, .sonicboom, .cannonspike, .shungokustasu, .tigeruppercut, .psychocrusher, .turnpunch,
+.spinningpiledriver, .yogaflame, .hundredhandslap, .flyingbarcelona, .electricthunder{
+    visibility: hidden;
+}
+
+#click1, #click3, #click5, #click7, #click9, #click11, #click13, #click15, #click17, #click19, #click21, #click23, #click25, #click27{
+    cursor: pointer;
+    width: 200px;
+    height: 260px;
+    left: 700px;
+    bottom: 290px;
+    position: absolute;
+    transform: translateZ(20px);
+}
+
+#click2, #click4, #click6, #click8, #click10, #click12, #click14, #click16, #click18, #click20, #click22, #click24, #click26, #click28{
+    visibility: hidden;
+    cursor: pointer;
+    width: 150px;
+    height: 190px;
+    left: 720px;
+    bottom: 250px;
+    position: absolute;
+    transform: translateZ(20px);
+}
+
+
+#info{
+    display: flex;
+    width: 400px;
+    height: 380px;
+    left: 200px;
+    bottom: 240px;
+    position: absolute;
+    transform: translateZ(22px);
+}
+
+.title{
+    width: 400px;
+    height: 290px;
+    font-family: Martyric;
+    filter: drop-shadow(5px 5px 1px #00000060);
+    transform: translateX(275px) translateY(-50px);
+}
+
+/*Names*/
+
+@font-face {
+    font-family: 'Brutal Font Pro';
+    src: url(BrutalFontPro.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Martyric';
+    src: url(Martyric_PersonalUse.ttf);
+    font-weight: 200;
+}
+
+
+#ryuTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    visibility: hidden;
+}
+
+#kenTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-130px);
+    visibility: hidden;
+}
+
+#chunTitle{
+    color: #ffffff;
+    font-size: 36pt;
+    transform: translateY(-260px);
+    visibility: hidden;
+}
+
+#guileTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-390px);
+    visibility: hidden;
+}
+
+#cammyTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-530px);
+    visibility: hidden;
+}
+
+#akumaTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-670px);
+    visibility: hidden;
+}
+
+#sagatTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-800px);
+    visibility: hidden;
+}
+
+#bisonTitle{
+    color: #ffffff;
+    font-size: 36pt;
+    transform: translateY(-930px);
+    visibility: hidden;
+}
+
+#balrogTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-1070px);
+    visibility: hidden;
+}
+
+#zangiefTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-1210px);
+    visibility: hidden;
+}
+
+#dhalsimTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-1350px);
+    visibility: hidden;
+}
+
+#eHondaTitle{
+    color: #ffffff;
+    font-size: 36pt;
+    transform: translateY(-1470px);
+    visibility: hidden;
+}
+
+#vegaTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-1590px);
+    visibility: hidden;
+}
+
+#blankaTitle{
+    color: #ffffff;
+    font-size: 46pt;
+    transform: translateY(-1730px);
+    visibility: hidden;
+}
+
+#inkblot{
+    background-image: url('1stBuilding - brushStroke2.png');
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-position: -50px;
+    bottom: -60px;
+    width: 400px;
+    height: 380px;
+    position: absolute;
+    transform: translateZ(23px);
+}
+
+/*Info*/
+
+@font-face {
+    font-family: 'a dripping marker';
+    src: url(adrip1.ttf);
+    font-weight: 200;
+}
+
+a{
+    filter: drop-shadow(2px 2px 0px #767676b9);
+}
+
+.text{
+    color: white;
+    font-family: a dripping marker;
+    font-size: 15pt;
+    text-align: center;
+    transform: translateZ(24px) translateY(125px) translateX(-50px);
+    width: 80px;
+    height: 80px;
+}
+
+.birth{
+    transform: translateX(-19px) translateY(125px);
+}
+
+.fightStyle{
+    transform: translateX(-210px) translateY(208px);
+}
+
+.special{
+    transform: translateX(-180px) translateY(208px);
+}
+
+.release{
+    transform: translateX(-140px) translateY(208px);
+}
+
+/*Training Spots - Countries*/
+
+#japan{
+    width: 50px;
+    height: 35px;
+    filter: none;
+    transform: translateY(2px) translateX(1px);
+    visibility: hidden;
+}
+
+#japan2{
+    width: 50px;
+    height: 35px;
+    filter: none;
+    transform: translateY(-33px) translateX(1px);
+    visibility: hidden;
+}
+
+#china{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-68px) translateX(1px);
+    visibility: hidden;
+}
+
+#usa{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-103px) translateX(1px);
+    visibility: hidden;
+}
+
+#uk{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-138px) translateX(1px);
+    visibility: hidden;
+}
+
+#japan3{
+    width: 50px;
+    height: 35px;
+    filter: none;
+    transform: translateY(-174px) translateX(1px);
+    visibility: hidden;
+}
+
+#thai{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-208px) translateX(1px);
+    visibility: hidden;
+}
+
+#shadaloo{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-244px) translateX(1px);
+    visibility: hidden;
+}
+
+#usa2{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-278px) translateX(1px);
+    visibility: hidden;
+}
+
+#russia{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-312px) translateX(1px);
+    visibility: hidden;
+}
+
+#india{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-348px) translateX(1px);
+    visibility: hidden;
+}
+
+#japan4{
+    width: 50px;
+    height: 35px;
+    filter: none;
+    transform: translateY(2px) translateX(-4px);
+    visibility: hidden;
+}
+
+#spain{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-418px) translateX(1px);
+    visibility: hidden;
+}
+
+#brazil{
+    width: 50px;
+    height: 35px;
+    transform: translateY(-453px) translateX(1px);
+    visibility: hidden;
+}
+
+/*Birthdays*/
+
+@font-face {
+    font-family: 'Mostwasted';
+    src: url(Mostwasted.ttf);
+    font-weight: 200;
+}
+
+#ryuDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(10px) translateX(2px);
+    visibility: hidden;
+}
+
+#kenDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-35px) translateX(2px);
+    visibility: hidden;
+}
+
+#chunDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-80px) translateX(2px);
+    visibility: hidden;
+}
+
+#guileDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-125px) translateX(2px);
+    visibility: hidden;
+}
+
+#cammyDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-170px) translateX(2px);
+    visibility: hidden;
+}
+
+#akumaDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-216px) translateX(2px);
+    visibility: hidden;
+}
+
+#sagatDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-258px) translateX(2px);
+    visibility: hidden;
+}
+
+#bisonDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-303px) translateX(2px);
+    visibility: hidden;
+}
+
+#balrogDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-349px) translateX(2px);
+    visibility: hidden;
+}
+
+#zangiefDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-393px) translateX(2px);
+    visibility: hidden;
+}
+
+#dhalsimDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-439px) translateX(2px);
+    visibility: hidden;
+}
+
+#ehondaDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-483px) translateX(2px);
+    visibility: hidden;
+}
+
+#vegaDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-528px) translateX(2px);
+    visibility: hidden;
+}
+
+#blankaDay{
+    width: 60px;
+    height: 45px;
+    font-family: Mostwasted;
+    font-size: 20pt;
+    text-align: center;
+    transform: translateY(-572px) translateX(2px);
+    visibility: hidden;
+}
+
+/*fight styles*/
+
+#karate{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 15pt;
+    text-align: center;
+    transform: translateY(11px) translateX(1px);
+    visibility: hidden;
+}
+
+#machinese{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-24px) translateX(1px);
+    visibility: hidden;
+}
+
+#wrestling{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-59px) translateX(1px);
+    visibility: hidden;
+}
+
+#shadaloodelta{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-104px) translateX(1px);
+    visibility: hidden;
+}
+
+#ansatsuken{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-130px) translateX(1px);
+    visibility: hidden;
+}
+
+#muaythai{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-168px) translateX(1px);
+    visibility: hidden;
+}
+
+#psychopower{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-200px) translateX(1px);
+    visibility: hidden;
+}
+
+
+#boxing{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 15pt;
+    text-align: center;
+    transform: translateY(-238px) translateX(1px);
+    visibility: hidden;
+}
+
+#yoga{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-272px) translateX(1px);
+    visibility: hidden;
+}
+
+#sumo{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-303px) translateX(1px);
+    visibility: hidden;
+}
+
+#spanishninjutsu{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-339px) translateX(1px);
+    visibility: hidden;
+}
+
+#electricattacks{
+    width: 50px;
+    height: 35px;
+    font-family: Mostwasted;
+    font-size: 10pt;
+    text-align: center;
+    transform: translateY(-376px) translateX(1px);
+    visibility: hidden;
+}
+
+/*div que estilisam o texto e o hover dos golpes especiais*/
+
+#hadouken{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-1px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#hadouken:hover{
+    color: #0041c3;
+    transform: scale(103%) translateY(-1px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #4784c9);
+}
+
+#shoryuken{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-10px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#shoryuken:hover{
+    color: #c33400;
+    transform: scale(103%) translateY(-10px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #c95f47);
+}
+
+#hyakuretsukyaku{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 11pt;
+    text-align: center;
+    transform: translateY(-19px) translateX(-12px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#hyakuretsukyaku:hover{
+    color: #00bdc3;
+    transform: scale(103%) translateY(-19px) translateX(-12px);
+    filter: drop-shadow(0px 0px 4px #47c9b3);
+}
+
+#sonicboom{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-36px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#sonicboom:hover{
+    color: #00c351;
+    transform: scale(103%) translateY(-36px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #47c988d2);
+}
+
+#cannonspike{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-50px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#cannonspike:hover{
+    color: #00b0c3;
+    transform: scale(103%) translateY(-50px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #47b5c9d2);
+}
+
+#shungokusatsu{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-66px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#shungokusatsu:hover{
+    color: #6c0c72;
+    transform: scale(103%) translateY(-66px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #c947c2d2);
+}
+
+#tigeruppercut{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-68px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#tigeruppercut:hover{
+    color: #c35500;
+    transform: scale(103%) translateY(-68px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #c97947d2);
+}
+
+#psychocrusher{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-78px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#psychocrusher:hover{
+    color: #c30000;
+    transform: scale(103%) translateY(-78px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #c94747d2);
+}
+
+#turnpunch{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-89px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#turnpunch:hover{
+    color: #c33400;
+    transform: scale(103%) translateY(-89px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #c95f47);
+}
+
+#spinningpiledriver{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-102px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#spinningpiledriver:hover{
+    color: #c30000;
+    transform: scale(103%) translateY(-102px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #c94747d2);
+}
+
+#yogaflame{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-109px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#yogaflame:hover{
+    color: #ffab10;
+    transform: scale(103%) translateY(-109px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #eb9825d2);
+}
+
+#hundredhandslap{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-113px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#hundredhandslap:hover{
+    color: #00b0c3;
+    transform: scale(103%) translateY(-113px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #47b5c9d2);
+}
+
+#flyingbarcelona{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-126px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#flyingbarcelona:hover{
+    color: #9f00c3;
+    transform: scale(103%) translateY(-126px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #af47c9d2);
+}
+
+#electricthunder{
+    width: 50px;
+    height: 10px;
+    font-family: Mostwasted;
+    font-size: 12pt;
+    text-align: center;
+    transform: translateY(-138px) translateX(-3px);
+    visibility: hidden;
+    transition: ease 0.5s;
+}
+
+#electricthunder:hover{
+    color: #6bc300;
+    transform: scale(103%) translateY(-138px) translateX(-3px);
+    filter: drop-shadow(0px 0px 4px #65c947d2);
+}
+
+/*divs que ativam os sprites dos golpes especiais dos personagens*/
+
+#hadClick, #hadClick2, #hadClick3, #hadClick4, #hadClick5, #hadClick6, #hadClick7, #hadClick8, #hadClick9, #hadClick10,
+#hadClick11, #hadClick12, #hadClick13, #hadClick14, #hadClick15{
+    cursor: pointer;
+    width: 80px;
+    height: 14px;
+    transform: translateZ(20px) translateY(17px);
+}
+
+/*jogos da franquia*/
+
+#sf1{
+    width: 50px;
+    height: 25px;
+    transform: translateY(11px) translateX(-6px);
+    visibility: hidden;
+}
+
+#sf2{
+    width: 50px;
+    height: 25px;
+    transform: translateY(-16px) translateX(-4px);
+    visibility: hidden;
+}
+
+/*seletor de persnagens*/
+
+#characterSelect{
+    width: 400px;
+    height: 232px;
+    position: absolute;
+    left: 944px;
+    bottom: 300px;
+    transform: translateZ(24px);
+    display: flex;
+    filter: drop-shadow(3px 2px 1px #0404046c);
+}
+
+#ryuButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#ryuButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#kenButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#kenButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#chunButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#chunButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#guileButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#guileButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#cammyButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#cammyButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#akumaButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#akumaButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#sagatButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#sagatButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#bisonButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#bisonButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#balrogButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#balrogButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#zangiefButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#zangiefButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#dhalsimButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#dhalsimButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#eHondaButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#eHondaButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#vegaButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#vegaButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+#blankaButton{
+    transform: scale(100%);
+    filter: grayscale(100%);
+    transition: transform ease 0.2s;
+}
+
+#blankaButton:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    transform: scale(110%);
+}
+
+.kenSel{
+    transform: translateX(8px);
+}
+
+.chunSel{
+    transform: translateX(16px);
+}
+
+.guileSel{
+    transform: translateX(24px);
+}
+
+.cammySel{
+    transform: translateX(32px);
+}
+
+.akumaSel{
+    transform: translateY(80px) translateX(-360px);
+}
+
+.sagatSel{
+    transform: translateY(80px) translateX(-352px);
+}
+
+.bisonSel{
+    transform: translateY(80px) translateX(-344px);
+}
+
+.balrogSel{
+    transform: translateY(80px) translateX(-336px);
+}
+
+.zangiefSel{
+    transform: translateY(80px) translateX(-328px);
+}
+
+.dhalsimSel{
+    transform: translateY(160px) translateX(-680px);
+}
+
+.eHondaSel{
+    transform: translateY(160px) translateX(-672px);
+}
+
+.vegaSel{
+    transform: translateY(160px) translateX(-664px);
+}
+
+.blankaSel{
+    transform: translateY(160px) translateX(-656px);
+}
+
+@media screen and (max-width: 600px){
+    /*pra tablet*/
+    body{
+        overflow: hidden;
+    }
+	#container1{
+		bottom: 185px;
+		left: 146px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+	#containermain{
+        width: 600px;
+		height: 950px;
+		overflow-y: auto;
+	}
+
+    #sky{
+        transform: scale(70%) translateX(-860px) translateY(-200px);
+    }
+
+    #citysillouette{
+        transform: scale(70%) translateX(-860px) translateY(-180px);
+    }
+	
+	#wallc{
+		transform: scale(70%) translateX(-860px) translateY(70px);
+	}
+
+    #floorc{
+		transform: scale(70%) scaleY(20%) translateX(-860px) translateY(2320px);
+	}
+
+    #cornerfloor1{
+        transform: scale(130%) translateY(380px);
+    }
+
+    #floor2{
+        transform: translateZ(1px) scale(160%) scaleY(30%) translateY(1050px);
+        background-repeat: repeat-y;
+    }
+	
+	#characterSelect{
+		transform: scale(60%) translateX(-1423px) translateY(-480px);
+	}
+
+    #ryu, #ken, #chunli, #guile, #cammy, #akuma, #sagat, #bison, #balrog, #zangief, #dhalsim, #ehonda, #vega, #blanka{
+        left: 0px;
+        transform: translateZ(4px) scale(59%) scaleY(130%) translateY(138px) translateX(-820px);
+    }
+	
+	#info{
+		transform: scale(90%) translateX(-120px) translateY(340px);
+	}
+}
+
+@media only screen and (min-width:601px) and (max-width: 1280px) {
+    /*para desktop 1*/
+    body{
+        overflow: hidden;
+    }
+	#container1{
+		bottom: 20px;
+		left: 30px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+	#containermain{
+        width: 1280px;
+		height: 950px;
+	}
+
+    #sky{
+        transform: scale(120%) translateX(-110px) translateY(-200px);
+    }
+
+    #citysillouette{
+        transform: scale(110%) translateX(-130px) translateY(-260px);
+    }
+	
+	#wallc{
+		transform: scale(110%) translateX(-160px) translateY(-70px);
+	}
+
+    #floorc{
+		transform: scale(120%) scaleY(30%) translateX(-260px) translateY(1160px);
+	}
+
+    #cornerfloor1{
+        transform: scale(130%) translateY(430px);
+    }
+
+    #floor2{
+        transform: translateZ(1px) scale(160%) scaleY(30%) translateY(1050px);
+        background-repeat: repeat-y;
+    }
+	
+	#characterSelect{
+		transform: scale(100%) translateX(-140px) translateY(-120px);
+	}
+
+    #ryu, #ken, #chunli, #guile, #cammy, #akuma, #sagat, #bison, #balrog, #zangief, #dhalsim, #ehonda, #vega, #blanka{
+        left: 0px;
+        transform: translateZ(4px) scale(89%) scaleY(130%) translateY(29px) translateX(-170px);
+    }
+	
+	#info{
+		transform: scale(110%) translateX(-120px) translateY(-60px);
+	}
+}
+
+@media only screen and (min-width:1731px) and (max-width: 1920px) {
+    body{
+        overflow: hidden;
+    }
+	#container1{
+		bottom: 315px;
+		left: 270px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+	#containermain{
+        width: 1920px;
+		height: 1080px;
+	}
+
+    #sky{
+        transform: scale(170%) translateX(100px) translateY(-160px);
+    }
+
+    #citysillouette{
+        transform: scale(170%) translateX(100px) translateY(-160px);
+    }
+	
+	#wallc{
+		transform: scale(130%) scaleY(90%) translateX(0px) translateY(-60px);
+        background-repeat: repeat-x;
+	}
+
+    #floorc{
+		transform: scale(160%) scaleY(20%) translateX(120px) translateY(1247px);
+	}
+
+    #cornerfloor1{
+        transform: scale(130%) translateY(420px);
+    }
+
+    #floor2{
+        transform: translateZ(1px) scale(220%) scaleY(30%) translateY(950px);
+        background-repeat: repeat-y;
+    }
+	
+	#characterSelect{
+		transform: scale(110%) translateX(250px) translateY(-240px);
+	}
+
+    #ryu, #ken, #chunli, #guile, #cammy, #akuma, #sagat, #bison, #balrog, #zangief, #dhalsim, #ehonda, #vega, #blanka{
+        left: 0px;
+        transform: translateZ(4px) scale(99%) scaleY(130%) translateY(9px) translateX(140px);
+    }
+	
+	#info{
+		transform: scale(120%) translateX(40px) translateY(-220px);
+	}
+}
+
+@media only screen and (max-width: 514px) {
+
+    /*celular*/
+    body{
+        overflow: hidden;
+    }
+	#container1{
+		bottom: 185px;
+		left: 110px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+	#containermain{
+        width: 600px;
+		height: 950px;
+		overflow-y: auto;
+	}
+
+    #sky{
+        transform: scale(70%) translateX(-86s0px) translateY(-200px);
+    }
+
+    #citysillouette{
+        transform: scale(70%) translateX(-860px) translateY(-180px);
+    }
+	
+	#wallc{
+		transform: scale(70%) translateX(-860px) translateY(70px);
+	}
+
+    #floorc{
+		transform: scale(70%) scaleY(20%) translateX(-860px) translateY(2320px);
+	}
+
+    #cornerfloor1{
+        transform: scale(130%) translateY(380px);
+    }
+
+    #floor2{
+        transform: translateZ(1px) scale(160%) scaleY(30%) translateY(1050px);
+        background-repeat: repeat-y;
+    }
+	
+	#characterSelect{
+		transform: scale(60%) translateX(-1480px) translateY(-480px);
+	}
+
+    #ryu, #ken, #chunli, #guile, #cammy, #akuma, #sagat, #bison, #balrog, #zangief, #dhalsim, #ehonda, #vega, #blanka{
+        left: 0px;
+        transform: translateZ(4px) scale(59%) scaleY(130%) translateY(138px) translateX(-880px);
+    }
+	
+	#info{
+		transform: scale(90%) translateX(-170px) translateY(340px);
+	}
+}
+
+@media only screen and (min-width:601px) and (max-width: 1280px) {
+    body{
+        overflow: hidden;
+    }
+	#container1{
+		bottom: 185px;
+		left: 30px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+	#containermain{
+        width: 1280px;
+		height: 950px;
+	}
+
+    #sky{
+        transform: scale(120%) translateX(-110px) translateY(-200px);
+    }
+
+    #citysillouette{
+        transform: scale(110%) translateX(-130px) translateY(-260px);
+    }
+	
+	#wallc{
+		transform: scale(110%) translateX(-160px) translateY(-70px);
+	}
+
+    #floorc{
+		transform: scale(120%) scaleY(30%) translateX(-260px) translateY(1160px);
+	}
+
+    #cornerfloor1{
+        transform: scale(130%) translateY(430px);
+    }
+
+    #floor2{
+        transform: translateZ(1px) scale(160%) scaleY(30%) translateY(1050px);
+        background-repeat: repeat-y;
+    }
+	
+	#characterSelect{
+		transform: scale(100%) translateX(-140px) translateY(-120px);
+	}
+
+    #ryu, #ken, #chunli, #guile, #cammy, #akuma, #sagat, #bison, #balrog, #zangief, #dhalsim, #ehonda, #vega, #blanka{
+        left: 0px;
+        transform: translateZ(4px) scale(89%) scaleY(130%) translateY(29px) translateX(-170px);
+    }
+	
+	#info{
+		transform: scale(110%) translateX(-120px) translateY(-60px);
+	}
+}
+
+@media only screen and (min-width:1281px) and (max-width: 1730px) {
+    body{
+        overflow: hidden;
+    }
+	#container1{
+		bottom: 315px;
+		left: 100px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+	#containermain{
+        width: 1920px;
+		height: 1080px;
+	}
+
+    #sky{
+        transform: scale(170%) translateX(10px) translateY(-160px);
+    }
+
+    #citysillouette{
+        transform: scale(170%) translateX(10px) translateY(-165px);
+    }
+	
+	#wallc{
+		transform: scale(130%) scaleY(90%) translateX(0px) translateY(-63px);
+        background-repeat: repeat-x;
+	}
+
+    #floorc{
+		transform: scale(160%) scaleY(20%) translateX(120px) translateY(1247px);
+	}
+
+    #cornerfloor1{
+        transform: scale(130%) translateY(420px);
+    }
+
+    #floor2{
+        transform: translateZ(1px) scale(220%) scaleY(30%) translateY(950px);
+        background-repeat: repeat-y;
+    }
+	
+	#characterSelect{
+		transform: scale(110%) translateX(60px) translateY(-210px);
+	}
+
+    #ryu, #ken, #chunli, #guile, #cammy, #akuma, #sagat, #bison, #balrog, #zangief, #dhalsim, #ehonda, #vega, #blanka{
+        left: 0px;
+        transform: translateZ(4px) scale(99%) scaleY(130%) translateY(9px) translateX(-40px);
+    }
+	
+	#info{
+		transform: scale(120%) translateX(-110px) translateY(-220px);
+	}
+}

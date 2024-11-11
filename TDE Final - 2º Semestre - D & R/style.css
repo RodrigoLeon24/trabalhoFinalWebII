@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Rubik", sans-serif;
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+#container1, #container3, #container5{/*Fundo da página*/
+    background:linear-gradient(to bottom,#000000,#212121,#363636,#4D4D4D);
+}
+
+#container2, #container4{
+    background: linear-gradient(to bottom, #212121, #4D4D4D, #8f0b14);
+}
+
+#container4{/*Esse container precisa do display flex pro formulário ficar no centro*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+iframe{
+    width: 1000px;
+    height: 600px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 50px;
+}
+
+footer{
+    width: 100%;
+    background-color: #000000;
+    margin-top: 75px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+footer p{
+    font-size: 15px;
+    text-align: center;
+}
+
+#quiz{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tituloQuiz{
+    margin: 50px;
+}
+
+/*colocar uma classe nesse label*/
+.labelQuiz{
+    background-color: #000000;
+    width: 350px;
+    height: 100px;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    font-size: 20px;
+}
+
+label:hover{
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.opcoes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.q{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 50px;
+    background-color: #212121;
+    padding: 50px;
+    width: 70%;
+    border: 1px solid #ffffff;
+}
+
+
+
+.pergunta{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+button{
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 300px;
+    height: 80px;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 15px;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: #8f0b14;
+    color: #FFFFFF;
+}
+
+.imgPergunta{
+    margin: 10px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding: 20px;
+}
+
+.imgResultado{
+    margin: 10px;
+    border: 3px solid #ffffff;
+}
+
+#resultadoQuiz{
+    width: 70%;
+    margin: 50px;
+    text-align: center;
+    background-color: #212121;
+}
+
+#resultadoQuiz h2{
+    font-size: 50px;
+    margin: 15px;
+}
+
+#descricaoResultado{
+    font-size: 25px;
+    margin: 50px;
+    margin-bottom: 100px;
+}
+
+#parede{
+    background-image: url(Characters\ -\ brick.png);
+    width: 1080px;
+    height: 850px;
+}
+
+#click1,#click2{
+    width: 1080px;
+    height: 850px;
+}
+
+#newsletter{
+    font-weight: bolder;
+    text-decoration: none;
+    transition: border-color 1s;
+    border-bottom: 1px solid transparent;
+
+}
+
+#newsletter:hover{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#formulario{
+    margin: 50px;
+    border: 2px solid #FFFFFF;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#formulario input{
+    color: #000000;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#formulario button{
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    color: #000000;
+    border-radius: 10px;
+}
+
+.parteFormulario{
+    margin-bottom:10px ;
+}
+
+nav ul{
+    color: #FFFFFF;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    font-size: 30px;
+    justify-content: center;
+}
+
+nav ul li{
+    font-weight: bold;
+    margin: 50px;
+}
+
+nav ul a{
+    text-decoration: none;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    transition: border-color 1s;
+    margin-bottom: 50px;
+}
+
+nav ul a:hover{
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#div1, #div2, #div3, #div6{/*A maioria das coisas do site estão em display flex, conforme a tela vai dimiuindo, o flex-wrap faz com que os itens "se ajeitem" */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+    padding: 50px;
+    width: 100%;
+}
+
+.artigo{
+    margin-bottom: auto;
+}
+
+#img1, #gif1, #img3, #img5, #img6, #img8{
+    margin: auto;
+}
+
+#img2, #img4{
+    margin-bottom: auto;
+}
+
+#titulo1, #titulo2, #titulo3, #titulo5{
+    margin-bottom: 50px;
+}
+
+#div4{
+    height: auto;
+    background-size: cover;
+    margin: auto;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#gridPersonagens{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 100px;
+    margin-top: 100px;
+}
+
+.personagens{
+    width: 300px;
+    height: 400px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    flex-direction: column;
+    transition: all 1s ease-in-out;
+}
+
+.personagens:hover{
+    transform: scale(1.2);
+}
+
+.cardHeader{
+    width: 100%;
+    height: 40%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    align-self: flex-start;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 1s;
+}
+
+h3{
+    background-color: #000000;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: bolder;
+    padding-top: 3px;
+    
+}
+
+.golpe{
+    color: #000000;
+    text-decoration: none;
+}
+
+.cardTexto{
+    color: #000000;
+    align-self: flex-start;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+/* Aqui é a parte da imagem de fundo dos cards, junto com o hover que troca a imagem por um gif */
+
+#cardHeader1{
+    background-image: url(imgsPersonagens/ryu1.jpg);
+}
+
+.personagens:hover #cardHeader1{
+    background-image: url(gifsPersonagens/ryu.gif);
+}
+
+#cardHeader2{
+    background-image: url(imgsPersonagens/ken1.jpg);
+}
+
+.personagens:hover #cardHeader2{
+    background-image: url(gifsPersonagens/ken.gif);
+    background-position-y: -55px;
+}
+
+#cardHeader3{
+    background-image: url(imgsPersonagens/chunLi1.jpg);
+}
+
+.personagens:hover #cardHeader3{
+    background-image: url(gifsPersonagens/chunLi.gif);
+    background-position-y: -65px;
+}
+
+#cardHeader4{
+    background-image: url(imgsPersonagens/guile1.jpg);
+}
+
+.personagens:hover #cardHeader4{
+    background-image: url(gifsPersonagens/guile.webp);
+}
+
+#cardHeader5{
+    background-image: url(imgsPersonagens/cammy1.jpg);
+}
+
+.personagens:hover #cardHeader5{
+    background-image: url(gifsPersonagens/cammy.gif);
+}
+
+#cardHeader6{
+    background-image: url(imgsPersonagens/akuma1.jpg);
+}
+
+.personagens:hover #cardHeader6{
+    background-image: url(gifsPersonagens/akuma.gif);
+    background-position-y: -50px;
+}
+
+#cardHeader7{
+    background-image: url(imgsPersonagens/sagat1.jpg);
+}
+
+.personagens:hover #cardHeader7{
+    background-image: url(gifsPersonagens/sagat.gif);
+}
+
+#cardHeader8{
+    background-image: url(imgsPersonagens/bison1.jpg);
+}
+
+.personagens:hover #cardHeader8{
+    background-image: url(gifsPersonagens/bison.gif);
+    background-position-y: -50px;
+}
+
+#cardHeader9{
+    background-image: url(imgsPersonagens/balrog1.jpg);
+}
+
+.personagens:hover #cardHeader9{
+    background-image: url(gifsPersonagens/balrog.gif);
+}
+
+#cardHeader10{
+    background-image: url(imgsPersonagens/zangief1.jpg);
+}
+
+.personagens:hover #cardHeader10{
+    background-image: url(gifsPersonagens/zangief.gif);
+}
+
+#cardHeader11{
+    background-image: url(imgsPersonagens/dhalsin1.jpg);
+}
+
+.personagens:hover #cardHeader11{
+    background-image: url(gifsPersonagens/dhalsim.gif);
+}
+
+#cardHeader12{
+    background-image: url(imgsPersonagens/juriHan1.jpg);
+}
+
+.personagens:hover #cardHeader12{
+    background-image: url(gifsPersonagens/juriHan.gif);
+}
+
+#cardHeader13{
+    background-image: url(imgsPersonagens/eHonda1.jpg);
+}
+
+.personagens:hover #cardHeader13{
+    background-image: url(gifsPersonagens/ehonda.gif);
+}
+
+#cardHeader14{
+    background-image: url(imgsPersonagens/vega1.jpg);
+}
+
+.personagens:hover #cardHeader14{
+    background-image: url(gifsPersonagens/vega.gif);
+}
+
+#cardHeader15{
+    background-image: url(imgsPersonagens/blanka1.jpg);
+}
+
+.personagens:hover #cardHeader15{
+    background-image: url(gifsPersonagens/blanka.webp);
+    background-position-y: -50px;
+}
+
+/* Ajustes de responsividade */
+
+
+@media (max-width: 600px){
+
+    img{
+        max-width: 300px;
+        height: auto;
+    }
+
+    .imgFooter{
+        max-width: auto;
+        height: 20px;
+    }
+
+    iframe{
+        max-width: 400px;
+        height: 400px;
+    }
+
+    p{
+        font-size: 20px;
+    }
+
+    nav ul{
+        font-size: 25px;
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    label{
+        max-width: 300px;
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1000px){
+
+    img{
+        max-width: 400px;
+        height: auto;
+    }
+
+    iframe{
+        max-width: 500px;
+        height: 500px;
+    }
+
+    .imgFooter{
+        max-width: auto;
+        height: 25px;
+    }
+}
+
+@media (min-width: 1440px){
+
+    img{
+        max-width: 1000px;
+        height: auto;
+    }
+
+    p{
+        font-size: 30px;
+    }
+
+    nav ul{
+        font-size: 40px;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 45px;
+    }
+}
+
+

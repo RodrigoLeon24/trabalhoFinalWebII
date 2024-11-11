@@ -1,0 +1,1217 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	perspective: -100px;
+	background-color: black;
+}
+
+#container1{
+	position: fixed;
+	display: flex;
+	width: 300px;
+	height: 300px;
+}
+
+#header{
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	display: block;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#logo{
+	width: 100%;
+	height: 35%;
+	background-image: url('SF - Header Logo Centralized.png');
+	background-size: 90%;
+	background-repeat: no-repeat;
+	background-position: 10px -90px;
+	opacity: 70%;
+	filter: grayscale(60%);
+	position: relative;
+	float: center;
+	margin-top: -300px;
+	transition: ease 1s;
+	cursor: pointer;
+}
+
+#logo:hover{
+	transform: scale(110%);
+}
+
+#bricks{
+	width: 100%;
+	height: 100%;
+	background-image: url('SF - Header Brick.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position-y: -30px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#containermain{
+	display: flex;
+	width: 1536px;
+	height: 825px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	perspective: -100px;
+	transform-style: preserve-3d;
+}
+
+#background{
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	transform-style: preserve-3d;
+	z-index: -4;
+	transform: translateZ(-10px);
+	perspective: -100px;
+}
+
+#sky{
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-image: url('Homepage - day.png');
+	background-size: 90%;
+	bottom: -270px;
+	background-repeat: no-repeat;
+	transform: translateZ(-20px);
+	animation: bg;
+	animation-timeline: view();
+}
+
+@keyframes bg {
+	0% {bottom: 130px;}
+	100% {bottom: -400px;}
+}
+
+#sky2{
+	position: absolute;
+	width: 1920px;
+	height: 1400px;
+	background-image: url('Bg-sky2.png');
+	background-size: 90%;
+	bottom: -270px;
+	background-repeat: no-repeat;
+	transform: translateZ(-21px);
+	animation: bg;
+	animation-timeline: view();
+}
+
+#backcity{
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-image: url('Backcity - Homepage - Day.png');
+	background-size: 100%;
+	bottom: -280px;
+	background-repeat: no-repeat;
+	transform: translateZ(-19px);
+	animation: bg;
+	animation-timeline: view();
+}
+
+#wallsbuildings{
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-image: url('Homepage - BuildingsWall.png');
+	background-size: 100%;
+	bottom: -200px;
+	background-repeat: no-repeat;
+	transform: translateZ(-19px) translateX(-210px);
+	animation: bdwall;
+	animation-timeline: view();
+}
+
+@keyframes bdwall{
+	0% {bottom: 200px;}
+	100% {bottom: -300px;}
+}
+
+#buildings{
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-image: url('Homepage - BuildingsFront.png');
+	background-size: 100%;
+	bottom: -200px;
+	background-repeat: no-repeat;
+	transform: translateZ(-19px) translateX(-210px);
+	animation: buildings;
+	animation-timeline: view();
+}
+
+@keyframes buildings {
+	0% {bottom: 200px;}
+	100% {bottom: -300px;}
+}
+
+#fade{
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-image: url('Homepage - Fade.png');
+	background-size: 100%;
+	bottom: -750px;
+	background-repeat: no-repeat;
+	transform: translateZ(-19px) translateX(-210px);
+}
+
+#city{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	transform-style: preserve-3d;
+	z-index: -1;
+	perspective: -100px;
+}
+
+#building1{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	background-image: url('1stBuilding2 - day.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: 700px;
+	left: -150px;
+	transform: translateZ(-2px);
+}
+
+#bannertrailer{
+	width: 800px;
+	height: 800px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column; 
+	position: relative;
+	z-index: -2;
+	transform-style: preserve-3d;
+	transform: translateZ(-5px);
+	left: 400px;
+	top: 0px;
+	perspective: -20px;
+	animation: bFullPerspective;
+	animation-timeline: view();
+}
+
+@keyframes bFullPerspective {
+	0% {top: -1000px;}
+	100% {top: 300px;}
+}
+
+#topb{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	background-image: url('Banner1-toplights.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(0px);
+	animation: topBarPerspective;
+	animation-timeline: view();
+}
+
+@keyframes topBarPerspective {
+	from {top: 50px;}
+	to {top: -15px;}
+}
+
+#toppb{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	background-image: url('Banner1-toplightsperspective.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	bottom: 11px;
+	z-index: -2;
+	transform: translateZ(-2px);
+	animation: topPerspective;
+	animation-timeline: view();
+}
+
+@keyframes topPerspective {
+	0% {transform: translateY(-994px) scaleY(-4); bottom: 39px;}
+	100% {transform: translateY(-10px); bottom: 7px;}
+}
+
+#middleb{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	transform: translateZ(2px) scale(105.5%);
+	margin-left: 210px;
+	margin-top: 403px;
+	animation: middlePerspective;
+	animation-timeline: view();
+}
+
+@keyframes middlePerspective {
+	0% {top: 0px;}
+	100% {top: px;}
+}
+
+#bottomb{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	background-image: url('Banner1-downbar.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(1px);
+}
+
+#bottompb{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	background-image: url('Banner1-downbarperspective.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(-2px);
+	animation: bottomPerspective;
+	animation-timeline: view();
+}
+
+@keyframes bottomPerspective {
+	0% {transform: translateY(540px) scaleY(-4); top: 4.2px;}
+	100% {transform: translateY(10px); top: 5.4px}
+}
+
+#barsb{
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	background-image: url('Banner1-standupbars.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-top: -20px;
+	transform: translateZ(0px) scale(100%);
+	animation: barsPerspective;
+	animation-timeline: view();
+}
+
+@keyframes barsPerspective {
+	0% {top: -90px;}
+	100% {top: 26.5px;}
+}
+
+#floor{
+	width: 1970px; 
+	height: 700px;
+	position: absolute;
+	background-image: url('city - floorbeacon.png');
+	background-size: 150%;
+	background-repeat: no-repeat;
+	top: 2850px;
+	transform: translateZ(2px);
+	animation: floorPerspective;
+	animation-timeline: view();
+}
+
+@keyframes floorPerspective {
+	0%	{transform: scaleY(70%) translateY(1212px);}
+	40% {transform: scaleY(10%) translateY(-510px);}
+}
+
+#buildingroom{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: 700px;
+	left: -150px;
+	z-index: -2;
+	transform: translateZ(-3px);
+	transform-style: preserve-3d;
+	perspective: -100px;
+}
+
+#wall{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	background-image: url('1stBuilding - roomwall.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(-5px);
+	animation: roomWallPerspective;
+	animation-timeline: view();
+}
+
+@keyframes roomWallPerspective {
+	0% {transform: translateY(-70px);}
+	100% {transform: translateY(65px);}
+}
+
+#tv{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	background-image: url('1stBuilding - roomtv.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(-4px);
+	animation: tvPerspective;
+	animation-timeline: view();
+}
+
+@keyframes tvPerspective {
+	0% {transform: translateY(-100px);}
+	100% {transform: translateY(150px);}
+}
+
+#tvgameplay{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	transform: translateZ(-5px);
+	animation: tvPerspective;
+	animation-timeline: view();
+}
+
+#wood{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	background-image: url('1stBuilding - roomwoodenthing.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(-1px);
+	animation: tvPerspective;
+	animation-timeline: view();
+}
+
+#about{
+	position: absolute;
+	width: 1920px;
+	height: 1920px;
+	z-index: 1;
+	top: 1350px;
+	left: 570px;
+	transform: translateZ(1px);
+	transform-style: preserve-3d;
+	perspective: 10px;
+	animation: opAbout;
+	animation-timeline: view();
+	opacity: 0%;
+}
+
+@keyframes opAbout{
+	0% {opacity: 0%}
+	5% {opacity: 100%;}
+	17% {opacity: 100%;}
+	25% {opacity: 0%;}
+}
+
+#logo2{
+	position: absolute;
+	width: 260px;
+	height: 310px;
+	background-image: url('SF - Header Logo Centralized.png');
+	background-size: 110%;
+	background-repeat: no-repeat;
+	left: 60px;
+	top: -580px;
+	transform: translateZ(3px);
+	animation: logoPerspective;
+	animation-timeline: view();
+	transition: ease 0.3s;
+	cursor: pointer;
+}
+
+#logo2:hover{
+	background-size: 120%;
+	top: -595px;
+	left: 50px;
+}
+
+@keyframes logoPerspective{
+	0% {transform: translateY(-10px);}
+	100% {transform: translateY(130px);}
+}
+
+#ink1{
+	position: absolute;
+	width: 1740px;
+	height: 1740px;
+	background-image: url('1stBuilding - brushStroke.png');
+	background-size: 60%;
+	top: -500px;
+	left: 70px;
+	background-repeat: no-repeat;
+	transform: translateZ(1px);
+	animation: inkPerspective;
+	animation-timeline: view();
+}
+
+@keyframes inkPerspective{
+	0% {transform: translateY(-130px);}
+	100% {transform: translateY(-40px);}
+}
+
+#text1{
+	width: auto;
+	height: auto;
+	color: white;
+	text-align: left;
+	transform: translateZ(2px);
+	font-size: 10pt;
+	margin-left: 340px;
+	margin-top: -45px;
+	top: -1300px;
+}
+
+#plot{
+	width: 800px;
+	height: 800px;
+	z-index: 1;
+	left: 300px;
+	top: 1400px;
+	position: absolute;
+	transform: translateZ(1px);
+	transform-style: preserve-3d;
+	perspective: 10px;
+	animation: opPlot;
+	animation-timeline: view();
+	opacity: 0%;
+}
+
+@keyframes opPlot{
+	25% {opacity: 0%}
+	34% {opacity: 100%;}
+	43% {opacity: 100%;}
+	55% {opacity: 0%;}
+}
+
+#ink2{
+	width: 800px;
+	height: 800px;
+	position: absolute;
+	background-image: url('1stBuilding - brushStroke2.png');
+	background-size: 80%;
+	background-repeat: no-repeat;
+	transform: translateZ(1px);
+	animation: inkPerspective;
+	animation-timeline: view();
+}
+
+#text2{
+	width: auto;
+	height: auto;
+	color: white;
+	text-align: center;
+	transform: translateZ(2px);
+	font-size: 10pt;
+	margin-left: -170px;
+	margin-top: 140px;
+	top: -1300px;
+}
+
+
+#plottitle{
+	width: 800px;
+	height: 800px;
+	position: absolute;
+	background-image: url('Plot - SF Font.png');
+	background-size: 25%;
+	background-repeat: no-repeat;
+	top: 35px;
+	left: 330px;
+	transform: translateZ(1px);
+	animation: inkPerspective;
+	animation-timeline: view();
+}
+
+#metalstructure{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: 700px;
+	left: -100px;
+	z-index: -2;
+	transform: translateZ(0px);
+	transform-style: preserve-3d;
+	perspective: 100px;
+}
+
+#structuresideprof{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	background-image: url('1stBuilding - metalStructure.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(1px);
+	animation: structure;
+	animation-timeline: view();
+}
+
+@keyframes structure{
+	0% {transform: translateY(-130px);}
+	100% {transform: translateY(5px);}
+}
+
+#stair1{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	left: -50px;
+	background-image: url('1stBuilding - Stairs1.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(4px);
+	animation: stair1;
+	animation-timeline: view();
+}
+
+@keyframes stair1{
+	0% {transform: translateY(-170px);}
+	100% {transform: translateY(5px);}
+}
+
+
+#stair2{
+	position: absolute;
+	width: 1920px;
+	height: 2400px;
+	left: -50px;
+	background-image: url('1stBuilding - Stairs2.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateZ(2px);
+	animation: stair2;
+	animation-timeline: view();
+}
+
+#banner{
+	background-image: url('banner.png');
+	background-size: 110%;
+	background-position: -60px -90px;
+	width: 800px;
+	height: 200px;
+	position: absolute;
+	filter: drop-shadow(11px 11px 2px rgba(0, 0, 0, 0.488));
+	transform: translateX(390px) translateY(440px) translateZ(1px);
+}
+
+@keyframes stair2{
+	0% {transform: translateY(-210px);}
+	100% {transform: translateY(5px);}
+}
+
+#icons{
+	width: 1920px;
+	height: 450px;
+	position: absolute;
+	left: -90px;
+	top: 2300px;
+	transform: translateZ(90px);
+	animation: opacityicons;
+	animation-timeline: view();
+}
+
+@keyframes opacityicons{
+	0% {opacity: 0;}
+	20% {opacity: 0;}
+	48% {opacity: 1;}
+}
+
+@font-face {
+    font-family: 'Martyric';
+    src: url(Martyric_PersonalUse.ttf);
+    font-weight: 200;
+}
+
+#explore{
+	width: 1920px;
+	height: 55px;
+	font-family: 'Martyric';
+	font-size: 50pt;
+	text-align: center;
+	transform: translateX(-90px);
+	filter: drop-shadow(4px 4px 0px #00000079)
+}
+
+#ex{
+	color: white;
+}
+
+#chara, #curi, #quiz, #news{
+	visibility: hidden;
+}
+
+#chara{
+	color: rgb(165, 9, 9);
+	transform: translateY(-110px);
+}
+
+#curi{
+	color: rgb(198, 1, 109);
+	transform: translateY(-220px);
+}
+
+#quiz{
+	color: rgb(254, 234, 106);
+	transform: translateY(-330px);
+}
+
+#news{
+	color: rgb(51, 169, 238);
+	transform: translateY(-440px);
+}
+
+#charactersicon, #curiositiesicon, #quizicon, #newslettericon{
+	width: 120px;
+	bottom: 130px;
+	position: absolute;
+	filter: drop-shadow(5px -3px 0px #00000037);
+	cursor: pointer;
+	transform: scale(180%);
+	transition: transform ease 0.2s;
+}
+
+#charactersicon:hover, #curiositiesicon:hover, #quizicon:hover, #newslettericon:hover{
+	transform: scale(190%);
+}
+
+#charactersicon{
+	height: 120px;
+	background-image: url('SF - HeaderCharactersIcon.png');
+	background-size: 190%;
+	background-position: -59px -53px;
+	background-repeat: no-repeat;
+	left: 490px;
+	transform: scale(180%);
+	transition: transform ease 0.2s;
+}
+
+#curiositiesicon{
+	height: 150px;
+	background-image: url('SF - HeaderCuriositiesIcon.png');
+	background-size: 190%;
+	background-position: -53px -34px;
+	background-repeat: no-repeat;
+	left: 710px;
+	transform: scale(180%) translateZ(60px);
+	transition: transform ease 0.2s;
+}
+
+#quizicon{
+	height: 150px;
+	background-image: url('SF - HeaderQuizIcon2.png');
+	background-size: 190%;
+	background-position: -59px -34px;
+	background-repeat: no-repeat;
+	left: 930px;
+	transform: scale(180%) translateZ(60px);
+	transition: transform ease 0.2s;
+}
+
+#newslettericon{
+	height: 150px;
+	background-image: url('SF - HeaderNewsletterIcon.png');
+	background-size: 190%;
+	background-position: -59px -34px;
+	background-repeat: no-repeat;
+	left: 1150px;
+	transform: scale(180%);
+	transition: transform ease 0.2s;
+}
+
+#splash3{
+	width: 1090px;
+	height: 450px;
+	background-image: url('splash3.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 350px;
+	transform: scale(120%) translateY(-50px);
+}
+
+#footer{
+	position: absolute;
+	width: 1920px;
+	height: 500px;
+	background-image: url('splash5.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: 304px -34px;
+	transform: scale(110%) translateY(0px);
+	left: 680px;
+	bottom: -2400px;
+}
+
+#logofooter{
+	width: 200px;
+	height: 200px;
+	background-image: url('SF - LogoFooter.png');
+	background-size: 90%;
+	background-repeat: no-repeat;
+	transform: translateX(610px) translateY(100px);
+	cursor: pointer;
+}
+#char2{
+	cursor: pointer;
+}
+
+@media screen and (max-width: 514px) {
+	/*celular*/
+	body{
+		overflow: hidden;
+	}
+
+	#container1{
+		bottom: 62px;
+		left: 110px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+
+	#containermain{
+        width: 514px;
+		height: 960px;
+		overflow-y: auto;
+	}
+
+	#background{
+		transform: translateY(0px);
+	}
+
+	#sky2{
+		transform: translateZ(-19px) translateY(-370px) translateX(-20px);
+	}
+
+	#city{
+		transform: scale(50%) translateX(-1140px);
+	}
+
+	#icons{
+		transform: scale(50%) translateX(-1140px) translateY(-2100px);
+	}
+
+	#bannertrailer{
+		transform: translateX(170px) translateZ(-5px);
+	}
+
+	#banner{
+		transform: translateX(390px) translateY(380px) translateZ(1px);
+	}
+
+	#about{
+		animation: none;
+		opacity: 1;
+	}
+
+	#plot, #icons{
+		animation: none;
+		opacity: 1;
+	}
+
+	#ink2, #text2, #plottitle, #floor, #logo2, #tex1, #ink1{
+		animation: none;
+	}
+
+	#logo2{
+		transform: translateX(240px) translateZ(3px) scale(70%) translateY(700px);
+	}
+
+	#floor{
+		transform: translateZ(2px) scaleY(-30%);
+	}
+
+	#text2{
+		transform: translateY(40px) translateZ(2px);
+	}
+
+	#footer{
+		transform: translateX(-1000px) scale(50%) translateY(-2800px);
+	}
+
+}
+
+@media screen and (max-width: 600px){
+    /*pra tablet*/
+    body{
+		overflow: hidden;
+	}
+
+	#container1{
+		bottom: 62px;
+		left: 150px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+
+	#containermain{
+        width: 600px;
+		height: 960px;
+		overflow-y: auto;
+	}
+
+	#background{
+		transform: translateY(-00px);
+	}
+
+	#sky2{
+		transform: translateZ(-19px) translateY(-370px) translateX(-20px);
+	}
+
+	#city{
+		transform: scale(50%) translateX(-1100px);
+	}
+
+	#icons{
+		transform: scale(50%) translateX(-1100px) translateY(-2100px);
+	}
+
+	#bannertrailer{
+		transform: translateX(130px) translateZ(-5px);
+	}
+
+	#banner{
+		transform: translateX(390px) translateY(380px) translateZ(1px);
+	}
+
+	#about{
+		animation: none;
+		opacity: 1;
+	}
+
+	#plot, #icons{
+		animation: none;
+		opacity: 1;
+	}
+
+	#ink2, #text2, #plottitle, #floor, #logo2, #tex1{
+		animation: none;
+	}
+
+	#logo2{
+		transform: translateX(240px) translateZ(3px) scale(70%) translateY(700px);
+	}
+
+	#floor{
+		transform: translateZ(2px) scaleY(-30%);
+	}
+
+	#text2{
+		transform: translateY(40px) translateZ(2px);
+	}
+
+	#footer{
+		transform: translateX(-1000px) scale(50%) translateY(-2800px);
+	}
+}
+
+@media only screen and (min-width:601px) and (max-width: 1280px) {
+    /*para desktop 1*/
+    body{
+		overflow: hidden;
+	}
+
+	#container1{
+		bottom: 62px;
+		left: 150px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+
+	#containermain{
+        width: 1280px;
+		height: 960px;
+		overflow-y: auto;
+	}
+
+	#background{
+		transform: translateY(-00px);
+	}
+
+	#sky2{
+		transform: translateZ(-19px) translateY(-370px) translateX(-20px);
+	}
+
+	#city{
+		transform: scale(100%) translateX(-450px);
+	}
+
+	#icons{
+		transform: scale(90%) translateX(-180px) translateY(-30px);
+	}
+
+	#bannertrailer{
+		transform: translateX(10px) translateZ(-5px);
+	}
+
+	#banner{
+		transform: translateX(390px) translateY(380px) translateZ(1px);
+	}
+
+	/*#about{
+		animation: none;
+		opacity: 1;
+	}
+
+	#plot, #icons{
+		animation: none;
+		opacity: 1;
+	}
+
+	#ink2, #text2, #plottitle, #floor, #logo2, #tex1{
+		animation: none;
+	}*/
+
+	#logo2{
+		transform: translateX(240px) translateZ(3px) scale(70%) translateY(700px);
+	}
+
+	#floor{
+		transform: translateZ(2px) scaleY(-30%);
+	}
+
+	/*#text2{
+		transform: translateY(40px) translateZ(2px);
+	}*/
+
+	#footer{
+		transform: translateX(-300px) scale(110%) translateY(-190px);
+	}
+}
+
+@media only screen and (min-width:1281px) and (max-width: 1730px) {
+    body{
+		overflow: hidden;
+	}
+
+	#container1{
+		bottom: 62px;
+		left: 150px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+
+	#containermain{
+        width: 1730px;
+		height: 960px;
+		overflow-y: auto;
+	}
+
+	#background{
+		transform: translateY(-00px);
+	}
+
+	#sky2{
+		transform: translateZ(-19px) translateY(-370px) translateX(-20px);
+	}
+
+	#city{
+		transform: scale(110%) translateX(-250px);
+	}
+
+	#icons{
+		transform: scale(110%) translateX(37px) translateY(170px);
+	}
+
+	#bannertrailer{
+		transform: translateX(10px) translateZ(-5px);
+	}
+
+	#banner{
+		transform: translateX(390px) translateY(380px) translateZ(1px);
+	}
+
+	/*#about{
+		animation: none;
+		opacity: 1;
+	}
+
+	#plot, #icons{
+		animation: none;
+		opacity: 1;
+	}
+
+	#ink2, #text2, #plottitle, #floor, #logo2, #tex1{
+		animation: none;
+	}*/
+
+	#logo2{
+		transform: translateX(240px) translateZ(3px) scale(70%) translateY(700px);
+	}
+
+	#floor{
+		transform: translateZ(2px) scaleY(30%) scale(80%);
+	}
+
+	/*#text2{
+		transform: translateY(40px) translateZ(2px);
+	}*/
+
+	#footer{
+		transform: translateX(180px) scale(110%) translateY(90px);
+	}
+}
+
+@media only screen and (min-width:1731px) and (max-width: 1920px) {
+    body{
+		overflow: hidden;
+	}
+
+	#container1{
+		bottom: 62px;
+		left: 150px;
+	}
+
+    #header{
+        bottom: -50px;
+    }
+
+    #logo{
+        bottom: -160px;
+    }
+    
+    #bricks{
+        bottom: -10px;
+    }
+
+    #container1, #header, #bricks, #logo{
+        position: relative;
+        height: 160px;
+    }
+
+	#containermain{
+        width: 1920px;
+		height: 960px;
+		overflow-y: auto;
+	}
+
+	#background{
+		transform: translateY(-00px);
+	}
+
+	#sky2{
+		transform: translateZ(-19px) translateY(-370px) translateX(-20px);
+	}
+
+	#city{
+		transform: scale(125%) translateX(-100px);
+	}
+
+	#icons{
+		transform: scale(125%) translateX(150px) translateY(390px);
+	}
+
+	#bannertrailer{
+		transform: translateX(10px) translateZ(-5px);
+	}
+
+	#banner{
+		transform: translateX(390px) translateY(380px) translateZ(1px);
+	}
+
+	/*#about{
+		animation: none;
+		opacity: 1;
+	}
+
+	#plot, #icons{
+		animation: none;
+		opacity: 1;
+	}
+
+	#ink2, #text2, #plottitle, #floor, #logo2, #tex1{
+		animation: none;
+	}*/
+
+	#logo2{
+		transform: translateX(240px) translateZ(3px) scale(70%) translateY(700px);
+	}
+
+	#floor{
+		transform: translateZ(2px) scaleY(27%) scale(80%) translateX(-250px) translateY(-110px);
+		animation: none;
+	}
+
+	/*#text2{
+		transform: translateY(40px) translateZ(2px);
+	}*/
+
+	#footer{
+		transform: translateX(420px) scale(130%) translateY(390px);
+	}
+}
